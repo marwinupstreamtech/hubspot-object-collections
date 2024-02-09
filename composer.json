@@ -1,7 +1,7 @@
 {
     "name": "marwinupstreamtech/hubspot-object-collections",
     "description": "PHP package for the HubSpot V3",
-    "type": "package",
+    "type": "library",
     "homepage": "https://github.com/marwinupstreamtech/hubspot-object-collections",
     "version": "0.1",
     "require": {
