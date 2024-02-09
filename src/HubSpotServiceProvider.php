@@ -1,6 +1,6 @@
 <?php
 
-namespace HubSpotSDK\HubSpotSDK;
+namespace HubSpot\ObjectCollection;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
