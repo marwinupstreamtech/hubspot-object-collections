@@ -21,7 +21,7 @@ class HubSpotObjectCollection
      */
     public function __construct(string $token = null, ClientInterface $client = null)
     {
-        $token = $token ? $token : (function_exists('config') ? config('hubspot.api_token') : null);
+        $token = $token ? $token : ( function_exists('config') ? config('hubspot.api_token') : null );
 
         if (!$token) {
             throw new ConfigurationException("No API token provided");
@@ -60,12 +60,12 @@ class HubSpotObjectCollection
         $collected_products = [];
 
         while ($has_more) {
-            $query = "products?limit={$limit}&properties={$this->arrangeProperties($properties)}";
+            $path = "products?limit={$limit}&properties={$this->arrangeProperties($properties)}";
             if (!is_null($after)) {
-                $query .= ($after) ? "&after={$after}" : "";
+                $path .= ($after) ? "&after={$after}" : "";
             }
 
-            $response = $this->sendHubSpotRequest($this->createHubSpotRequest("GET", $query));
+            $response = $this->sendHubSpotRequest($this->createHubSpotRequest("GET", $path));
             $products = $response['results'];
 
             if (isset($response['paging'])) {
@@ -80,9 +80,9 @@ class HubSpotObjectCollection
         return $collected_products;
     }
 
-    protected function createHubSpotRequest(String $method = 'GET', String $query = null, Array $body = [])
+    protected function createHubSpotRequest(String $method = 'GET', String $path = "", Array $body = [])
     {
-        return new Request($method, "{$this->hubspotApi}/{$query}", [
+        return new Request($method, "{$this->hubspotApi}/{$path}", [
                 'accept' => 'application/json',
                 'content-type' => 'application/json',
                 'authorization' => "Bearer {$this->apiToken}"
