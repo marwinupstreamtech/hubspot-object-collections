@@ -7,8 +7,6 @@
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.4",
-        "firebase/php-jwt": "^6.2",
-        "league/oauth2-client": "^2.6",
         "nesbot/carbon": "^2.58"
     },
     "require-dev": {
@@ -17,16 +15,16 @@
     },
     "autoload": {
         "psr-4": {
-            "HubSpot\\HubSpotObjectCollection\\": "src/"
+            "HubSpot\\ObjectCollection\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "HubSpot\\HubSpotObjectCollection\\HubSpotServiceProvider"
+                "HubSpot\\ObjectCollection\\HubSpotServiceProvider"
             ],
             "aliases": {
-                "HubSpotObjectCollection": "HubSpot\\HubSpotObjectCollection\\HubSpotObjectCollection"
+                "HubSpotObjectCollection": "HubSpot\\ObjectCollection\\HubSpotObjectCollection"
             }
         }
     },

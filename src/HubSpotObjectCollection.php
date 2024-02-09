@@ -8,7 +8,7 @@ use HubSpot\ObjectCollection\Exceptions\ConfigurationException;
 
 class HubSpotObjectCollection
 {
-    const API_URL = "https://api.monday.com/v2";
+    const API_URL = "https://api.hubapi.com/crm/v3";
     protected $apiToken;
     protected $client;
     protected $autoRetryComplexityLimit;

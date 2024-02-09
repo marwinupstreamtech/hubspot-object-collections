@@ -1,7 +1,8 @@
 <?php
 
-namespace HubSpotSDK\MondaySDK;
+namespace HubSpot\ObjectCollection;
 
-class HubSpotCRMCollection {
+class HubSpotCRMCollection
+{
 
 }

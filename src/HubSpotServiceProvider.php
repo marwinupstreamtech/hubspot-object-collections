@@ -5,8 +5,8 @@ namespace HubSpot\ObjectCollection;
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
-class HubSpotServiceProvider extends ServiceProvider {
-
+class HubSpotServiceProvider extends ServiceProvider
+{
     protected $defer = false;
 
     public function boot()
