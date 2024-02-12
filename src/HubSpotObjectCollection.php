@@ -73,7 +73,7 @@ class HubSpotObjectCollection
             throw new ConfigurationException("Invalid object type provided");
         }
 
-        $objectType = (!$objectType) ? throw new ConfigurationException("No API token provided") : strtolower($objectType);
+        $objectType = (!$objectType) ? throw new ConfigurationException("No object type provided") : strtolower($objectType);
         $has_more = true;
         $after = null;
         $collected_objects = [];
