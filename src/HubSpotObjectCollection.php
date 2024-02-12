@@ -68,6 +68,11 @@ class HubSpotObjectCollection
      */
     public function getCollection(String $objectType, Array $properties = ['hs_object_id', 'name'], Int $limit = 100, Bool $archive = false)
     {
+        $objects = ['companies', 'contacts', 'deals', 'feedback_submissions', 'line_items', 'products', 'quotes', 'discounts', 'fees', 'taxes', 'tickets', 'goals'];
+        if (!in_array($objectType, $objects)) {
+            throw new ConfigurationException("Invalid object type provided");
+        }
+
         $objectType = (!$objectType) ? throw new ConfigurationException("No API token provided") : strtolower($objectType);
         $has_more = true;
         $after = null;
