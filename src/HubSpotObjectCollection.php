@@ -40,7 +40,7 @@ class HubSpotObjectCollection
      * Sets the users API Token
      * @param String token
      *
-     * @return JackTaylorGroup\MondaySDK $this
+     * @return HubSpot\ObjectCollection $this
      */
     public function setAPIToken(string $token)
     {
