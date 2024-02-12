@@ -19,7 +19,7 @@ class HubSpotServiceProvider extends ServiceProvider
         }
 
         //Merge config first, then keep a publish option
-        $this->mergeConfigFrom(__DIR__.'/config/hubspot.php', 'monday');
+        $this->mergeConfigFrom(__DIR__.'/config/hubspot.php', 'hubspot');
         $this->publishes([
             __DIR__.'/config/hubspot.php' => config_path('hubspot.php'),
         ], 'config');

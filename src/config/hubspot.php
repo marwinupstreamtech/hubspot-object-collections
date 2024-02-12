@@ -14,4 +14,5 @@ return [
     // hubspot.com App Framework Configuration
     'api_redirect_uri' => env('HUBSPOT_REDIRECT_URI'),
     'api_scopes' => env('HUBSPOT_SCOPES'),
+    'api_token' => env('HUBSPOT_PRIVATE_APP_API_TOKEN'),
 ];
