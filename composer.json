@@ -3,7 +3,7 @@
     "description": "PHP package for the HubSpot V3",
     "type": "library",
     "homepage": "https://github.com/marwinupstreamtech/hubspot-object-collections",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "php": "^8.1",
         "guzzlehttp/guzzle": "^7.4",
